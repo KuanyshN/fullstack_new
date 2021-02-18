@@ -11,8 +11,10 @@ const positionRoutes = require('./routes/position');
 const app = express();
 const keys = require('./config/keys')
 
+useNewUrlParser = true
+
 mongoose.connect(keys.mongoURI)
-    .then(() => console.log('MongoDB connected.'))
+    .then(() => console.log('MongoDB connected. СВЯЗЬ ЕСТЬ'))
     .catch(error => console.log(error, 'ОШИБКА ПОДКЛЮЧЕНИЕ'))
 
 app.use(passport.initialize())
