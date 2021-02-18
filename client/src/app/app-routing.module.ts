@@ -41,7 +41,6 @@ const router: Routes = [
       {path: 'categories', component: CategoriesPageComponent},
       {path: 'categories/new', component: CategoriesFormComponent},
       {path: 'categories/:id', component: CategoriesFormComponent},
-      {path: 'studypage', component: MyStudyPageComponent}
 
     ]
   }

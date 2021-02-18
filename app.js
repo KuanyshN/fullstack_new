@@ -11,11 +11,21 @@ const positionRoutes = require('./routes/position');
 const app = express();
 const keys = require('./config/keys')
 
-useNewUrlParser = true
 
 mongoose.connect(keys.mongoURI)
     .then(() => console.log('MongoDB connected. СВЯЗЬ ЕСТЬ'))
     .catch(error => console.log(error, 'ОШИБКА ПОДКЛЮЧЕНИЕ'))
+
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://Kuanysh:111222@fullstack.pu1sf.mongodb.net/%3Cdbname%3E?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+// client.connect(err => {
+//     const collection = client.db("test").collection("devices");
+//     // perform actions on the collection object
+//     client.close();
+// });
+
 
 app.use(passport.initialize())
 require('./middleware/passport')(passport)
