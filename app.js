@@ -13,7 +13,7 @@ const keys = require('./config/keys')
 
 mongoose.connect(keys.mongoURI)
     .then(() => console.log('MongoDB connected.'))
-    .catch(error => console.log(error))
+    .catch(error => console.log(error, 'ОШИБКА ПОДКЛЮЧЕНИЕ'))
 
 app.use(passport.initialize())
 require('./middleware/passport')(passport)

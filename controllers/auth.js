@@ -13,6 +13,8 @@ module.exports.login = async function (req, res) {
     //     }
     // })
 
+    useNewUrlParser = true
+
 
     const candidate = await User.findOne({email: req.body.email})
     if (candidate) {
